@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Layout</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #00000058;
+        }
+        table{
+            width: 100%;
+        }
+        .left{
+            background-color: #FECCCB;
+        }
+        .center{
+            background-color: #CCFFCC;
+        }
+        .right{
+            background-color: #CBCCFE;
+        }
+        td.left,td.right,td.center{
+            padding: 12px 50px  25px 25px;
+            font-size: 27px;
+            letter-spacing: 2.7px;
+        }
+        td >p{
+            margin: 0;
+
+        }
+        .heading{
+            padding: 37px 25px 0;
+            letter-spacing: 2px;
+            font-size: 45px;
+            text-align: left;
+        }
+        .spacer{
+            width: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- #FECCCB  #CCFFCC #CBCCFE-->
+    <table style="background-color: black; color: white; padding: 37px 25px 25px;">
+        <tr class="heading" >
+            <th style="padding-bottom: 25px;">Introduction</th>
+
+        </tr>
+        <tr>
+            <td style="font-size: 27px; letter-spacing: 2.7px;">
+                These are just some words to fill a div element, so that its layout becomes
+                real and not abstract anymore.
+            </td>
+        </tr>
+    </table>
+    <table  style="border-collapse: collapse;" >
+        <tr>
+            <th class="left heading">Left Coulumn</th>
+            <td class="spacer"></td>
+            <th class="center heading">Center Coulumn</th>
+            <td class="spacer"></td>
+            <th class="right heading">Right Coulumn</th>
+        </tr>
+        <tr>
+            <td class="left"><p>These are just some words to fill a div element, so that its layout becomes
+                real and not abstract anymore.</p></td>
+            <td class="spacer"></td>
+
+            <td class="center"><p>These are just some words to fill a div element, so that its layout becomes
+                real and not abstract anymore.</p></td>
+            <td class="spacer"></td>
+
+            <td class="right"><p>These are just some words to fill a div element, so that its layout becomes
+                real and not abstract anymore.</p></td>
+        </tr>
+    </table>
+</body>
+
+</html>
