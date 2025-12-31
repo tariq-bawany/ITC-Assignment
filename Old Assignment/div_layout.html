@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        body {
+            background-color: #00000058;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow-x: hidden;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        div#top {
+            width: 100%;
+            padding:40px 55px 10px 20px;
+        }
+
+        div > p {
+            letter-spacing: 2.2px;
+            word-spacing: 2px;
+            font-size: 25px;
+        }
+        h1{
+            
+            letter-spacing: 1.6px;
+            word-spacing: 2px;
+            font-size: 25px;
+        }
+
+        div#top>h1 {
+            font-size: 40px;
+            /* width: fit-content; */
+            margin-top: 0;
+        }
+
+        div#bottom {
+            /* background-color: bisque; */
+            /* height: 300px; */
+            width: 100%;
+            display: flex;
+            gap: 10px;
+        }
+
+        div#bottom>div {
+            /* height: fit-content; */
+            padding: 25px 35px 10px 20px;
+            flex: 1;
+        }
+
+        div#bottom>div h1 {
+            margin-top: 10px;
+            font-size: 35px;}
+
+        
+    </style>
+</head>
+
+<body>
+    <div id="top" style="background-color: #000000; color: white; ">
+        <h1>Introduction</h1>
+        <p>These are just some words to fill a div element, so that its layout becomes real and not abstract anymore.</p>
+    </div>
+    <div id="bottom">
+        <div style="background-color: #FECCCB">
+            <h1>Left Column</h1>
+            <p>These are just some words to fill a div element, so that its layout becomes real and not abstract anymore.
+            </p>
+        </div>
+        <div style="background-color: #CCFFCC; ">
+            <h1>Center Coulumn</h1>
+            <p>These are just some words to fill a div element, so that its layout becomes real and not abstract anymore.
+            </p>
+        </div>
+        <div style="background-color: #CBCCFE;">
+            <h1>Right Column</h1>
+            <p>These are just some words to fill a div element, so that its layout becomes real and not abstract anymore.
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
