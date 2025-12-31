@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Periodic Table (118 Elements)</title>
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+        :root {
+            --cell-w: 68px;
+            --cell-h: 64px;
+            --spacer-h: 18px;
+            --border: 1px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Montserrat, sans-serif;
+            background: #ffffff;
+            color: #111827;
+        }
+
+        .wrap {
+            max-width: 100vw;
+            margin: 0 auto;
+            padding: 16px;
+        }
+
+        header h1 {
+            text-align: center;
+            margin: 0;
+            font-size: 20px;
+            font-weight: 800;
+        }
+
+        p {
+            margin: 6px 0 0;
+            font-size: 13px;
+            color: #4b5563;
+        }
+
+        .table-scroll {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            margin-top: 12px;
+            overflow: auto;
+        }
+
+        #container {
+            display: grid;
+            grid-template-columns: repeat(18, var(--cell-w));
+            grid-template-rows: repeat(7, var(--cell-h)) var(--spacer-h) repeat(2, var(--cell-h));
+            gap: 0;
+            border: 1px solid #111827;
+        }
+
+        .grid-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border-right: var(--border) solid #111827;
+            border-bottom: var(--border) solid #111827;
+            text-align: center;
+            padding: 4px;
+            color: rgba(17, 24, 39, 0.95);
+            box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.10);
+            user-select: none;
+            /* transition: filter 0.5s ease, outline-color 0.5s ease; */
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .grid-item:hover {
+            filter: brightness(1.03) saturate(1.08);
+            outline: 2px solid rgba(17, 24, 39, 0.7);
+            outline-offset: -2px;
+            z-index: 2;
+        }
+
+        .atomic_number {
+            width: 100%;
+            text-align: left;
+            font-size: 10px;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .ele_symbol {
+            font-size: 20px;
+            font-weight: 800;
+            line-height: 1;
+            margin-top: 2px;
+        }
+
+        .ele_name,
+        .atomic_mass {
+            font-size: 9px;
+            font-weight: 700;
+            line-height: 1.05;
+            opacity: 0.95;
+        }
+
+        .ele_name {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .series-hint {
+            justify-content: center;
+            gap: 4px;
+            font-weight: 800;
+        }
+
+        .series-hint .range {
+            font-size: 12px;
+        }
+
+        .series-hint .label {
+            font-size: 9px;
+            font-weight: 700;
+            opacity: 0.95;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <h1>Periodic Table</h1>
+        </header>
+
+        <section class="table-scroll" >
+            <div id="container" ></div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
